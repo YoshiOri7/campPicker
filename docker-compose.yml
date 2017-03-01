@@ -1,0 +1,15 @@
+version: '2'  # specify docker-compose version
+
+# Define the services/containers to be run
+#    build: .
+services:
+  mainserver: # name of the first service
+    image: yoshiori/campmain:dev
+    ports:
+      - "3000:3000" # specify port forewarding
+    links:
+      - database
+  database:
+    image: mongo
+    ports:
+      - "27017:27017"

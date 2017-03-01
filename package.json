@@ -5,11 +5,14 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "dbinit": "node DBclear.js",
+    "dbseed": "node DBseeds.js",
+    "start": "node server.js"
   },
   "author": "yoshi",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.4.7",
     "body-parser": "^1.15.2",
     "connect-flash": "^0.1.1",
     "ejs": "^2.5.2",
